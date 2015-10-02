@@ -41,9 +41,10 @@
       </ion-header-bar>
 
       <ion-content padding="true" class="has-header">
-        <button class="button button-balanced button-block  icon-left ion-lightbulb" id="rele001" ng-click="releControl(&apos;rele001&apos;)">Lampada</button>
-        <button class="button button-assertive button-block  icon-left ion-monitor" id="rele002" ng-click="releControl(&apos;rele002&apos;)">Monitor</button>
+        <button class=" button-energized button-block  icon-left ion-lightbulb button"  ng-class="{'active': isActive}"  id="rele001" ng-click="releControl(&apos;rele001&apos;);activeButton()">Lampada</button>
+        <button class="button button-assertive button-block  icon-left ion-monitor"  id="rele002" ng-click="releControl(&apos;rele002&apos;)">Monitor</button>
         <button class="button button-balanced button-block  icon-left ion-social-rss" id="rele003" ng-click="getReleStatus()">Sensor</button>
+
       </ion-content>
     </ion-pane>
   </body>

@@ -15,11 +15,28 @@ angular.module('callidus.controllers',[]).
 
     $scope.releControl = function (rele) {
       var data = {rele: rele};
+
       mySocket.emit('acionado',data)
     }
+
 
     $scope.getReleStatus = function () {
 
       mySocket.emit('getStatus')
     }
+
+    $scope.isActive = false;
+    $scope.activeButton = function() {
+      $scope.isActive = !$scope.isActive;
+    }  
+
   });
+
+var classApp = angular.module('classApp', []);
+
+classApp.controller('classCtrl', function ($scope) {
+  $scope.isActive = false;
+  $scope.activeButton = function() {
+    $scope.isActive = !$scope.isActive;
+  }  
+});

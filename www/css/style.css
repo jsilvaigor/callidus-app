@@ -1,1 +1,25 @@
-/* Empty. Add your own CSS if you like */
+body {
+  background: #F8E1C2;
+  -webkit-font-smoothing: antialiased;
+  padding: 40px;
+  text-align: center;
+}
+
+.button {
+  border: none;
+  padding: 14px;
+  color: #fff;
+  margin: 0 10px;
+  background: #3D3240;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.active {
+  background: #FF735C;
+}
+
+.disabled {
+  background: #000000
+  color: #aaa;
+}
