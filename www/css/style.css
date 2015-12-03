@@ -5,21 +5,79 @@ body {
   text-align: center;
 }
 
-.button {
-  border: none;
-  padding: 14px;
+.botao {
+
+  position: relative;
+  display: block;
+  padding: 0 12px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  vertical-align: inherit;
+  text-align: center;
+  text-overflow: ellipsis;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 22px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  clear: both;
+  width: 100%;
+  height: 4em;
+}
+
+
+.lampadaActive {
+  border-color: #e6b400;
+  background-color: #e6b400;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lampadaDisabled {
+  border-color: #e6b400;
+  background-color: #ffc900;
   color: #fff;
-  margin: 0 10px;
-  background: #3D3240;
-  font-weight: 700;
-  border-radius: 4px;
 }
 
-.active {
-  background: #FF735C;
+.monitorActive {
+  border-color: #28a54c;
+  background-color: #28a54c;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
-.disabled {
-  background: #000000
-  color: #aaa;
+.monitorDisabled {
+  border-color: #28a54c;
+  background-color: #33cd5f;
+  color: #fff;
+}
+
+.icon{
+  display: inline-block;
+  vertical-align: inherit;
+  font-size: 2em;
+  pointer-events: none;
+  float: none;
+  padding-right: 0.2em;
+  padding-left: 0;
+}
+.bar.bar-dark{
+  height: 5em;
+}
+.has-header{
+  top: 5em
+}
+.bar .title.title-left{
+  text-align: center;
+  font-size: 2.5em;
+  top: .3em;
+}
+.bar .title{
+  text-align: center;
+  font-size: 2.5em;
+  top: .3em;
+}
+.ion-leaf{
+  color: #34c200;
+  font-size:5em;
 }

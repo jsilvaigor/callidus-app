@@ -14,9 +14,11 @@
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+<script src="lib/ionic-platform-web-client/dist/ionic.io.bundle.min.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
-    <script src="cordova.js"></script>
+    <!-- Cordova is bootstrapped by ionic-platform-web-client, uncomment this if you remove ionic-platform-web-client... -->
+<!-- <script src="cordova.js"></script> -->
 
     <!--socket io client library-->
     <script src="js/socket.io.js"></script>
@@ -34,17 +36,19 @@
   </head>
   <body ng-app="callidus">
 
-    <ion-pane ng-controller="callidus_controller">
-      <ion-header-bar class="bar-positive padding-horizonta">
+    <ion-pane ng-controller="callidus_controller" data-ng-init="getReleStatus()">
+      <ion-header-bar class="bar-dark padding-horizonta">
         <h1 class="title">Callidus</h1>
 
       </ion-header-bar>
 
       <ion-content padding="true" class="has-header">
-        <button class=" button-energized button-block  icon-left ion-lightbulb button"  ng-class="{'active': isActive}"  id="rele001" ng-click="releControl(&apos;rele001&apos;);activeButton()">Lampada</button>
-        <button class="button button-assertive button-block  icon-left ion-monitor"  id="rele002" ng-click="releControl(&apos;rele002&apos;)">Monitor</button>
-        <button class="button button-balanced button-block  icon-left ion-social-rss" id="rele003" ng-click="getReleStatus()">Sensor</button>
-
+        <button class="botao" ng-class="{&apos;lampadaActive&apos;: !lampadaActive, &apos;lampadaDisabled&apos;: lampadaActive}" id="rele001" ng-click="releControl(&apos;relay001&apos;)">
+          <span class="icon ion-lightbulb"></span>
+              Lampada</button>
+        <button class="botao" ng-class="{&apos;monitorActive&apos;: !monitorActive, &apos;monitorDisabled&apos;: monitorActive}" id="rele002" ng-click="releControl(&apos;relay002&apos;)">
+          <span class="icon ion-monitor"></span>
+          Monitor</button>
       </ion-content>
     </ion-pane>
   </body>
